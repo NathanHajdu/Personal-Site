@@ -1,6 +1,8 @@
 # Nathan Hajdu's Portfolio
 
-Welcome to my Portfolio website! This README provides a brief overview of the website and instructions for running it.
+Welcome to my Portfolio website! This README provides a brief overview of the website and instructions for running it. 
+
+You can view the site hosted on Github here: https://nathanhajdu.github.io/PersonalSite/ 
 
 ## Table of Contents
 
