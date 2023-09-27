@@ -2,7 +2,7 @@
 
 Welcome to my Portfolio website! This README provides a brief overview of the website and instructions for running it. 
 
-You can view the site hosted on Github here: https://nathanhajdu.github.io/PersonalSite/ 
+You can view the site hosted on Github here: https://nathanhajdu.github.io/Personal-Site/ 
 
 ## Table of Contents
 
