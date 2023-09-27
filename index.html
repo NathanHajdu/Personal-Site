@@ -142,10 +142,10 @@
                             System.out.println("Hello world!");
                         </p>
                     </div>
-                    <div class="about-image dimmed">
+                    <div class="about-image dimmed" id="about-image">
                         <img src="images/NathanProfilePic.png" alt="Nathan Profile Picture">
-                    </div>
-                </div>
+                        <img src="" alt="NASA APOD Image" class="nasa-apod-image" id="nasa-apod-image">
+                      </div>                      
         </section>
 
         <!-- Experience-->
@@ -360,6 +360,16 @@
                 </div>
             </div>
         </section>
+        <!-- GitHub Projects -->
+        <section id="github" class="colored-bg">
+            <div class="github-container">
+                <h2>GitHub Projects</h2>
+            </div>
+            <div class="github-grid" id="github-repo-grid">
+                <!-- Grid items will be added here dynamically -->
+            </div>
+        </section>
+
 
         <!-- Contact -->
         <section id="contact" class="colored-bg">
@@ -387,6 +397,7 @@
 
             </div>
         </section>
+        <script src="github.js"></script>
 </body>
 <footer id="footer">
     <a href="https://twitter.com/Nate41370206" class="a btn " role="button" target="_blank"><i class="fab fa-twitter"></i></a>

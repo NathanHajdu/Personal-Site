@@ -129,3 +129,64 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// github.js
+const username = 'NathanHajdu';
+
+// GitHub API to fetch repositories
+fetch(`https://api.github.com/users/${username}/repos`)
+    .then(response => response.json())
+    .then(data => {
+        // Process the GitHub repository data
+        const repoGrid = document.getElementById('github-repo-grid'); // Get the grid container
+        data.forEach(repo => {
+            const repoBox = document.createElement('div'); // Create a container for each repo
+            repoBox.className = 'github-grid-item'; // Add the grid-item class
+
+            // Create an anchor element for the repository link
+            const repoLink = document.createElement('a');
+            repoLink.href = repo.html_url;
+
+            // Create a heading for the repository name (title)
+            const repoTitle = document.createElement('h3');
+            repoTitle.textContent = repo.name;
+
+            // Create a paragraph for the repository description
+            const repoDescription = document.createElement('p');
+            repoDescription.textContent = repo.description || 'No description provided';
+
+            // Create a "Learn More" button element
+            const learnMoreButton = document.createElement('a');
+            learnMoreButton.href = repo.html_url;  
+            learnMoreButton.textContent = 'Learn More';  
+            learnMoreButton.className = 'github-learn-button';  
+
+            // Append elements to the container
+            repoBox.appendChild(repoLink);
+            repoBox.appendChild(repoTitle);
+            repoBox.appendChild(repoDescription);  
+            repoBox.appendChild(learnMoreButton);  
+            repoGrid.appendChild(repoBox);
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching GitHub data:', error);
+    });
+
+
+// NASA's APOD image
+function fetchNASAImage() {
+  fetch('https://api.nasa.gov/planetary/apod?api_key=MWkEZgsdkwNBNZdQrZKKE5rMmEvAyXrqwLaxxXyB')
+    .then(response => response.json())
+    .then(data => {
+      const imageURL = data.url;
+      const nasaApodImage = document.getElementById('nasa-apod-image');
+      nasaApodImage.src = imageURL;
+    })
+    .catch(error => console.error('Error fetching NASA image:', error));
+}
+
+// Call the function to fetch and set the NASA image
+fetchNASAImage();
+
+
